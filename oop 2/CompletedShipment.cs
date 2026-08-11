@@ -1,6 +1,6 @@
-﻿class StandardShipment : Shipment
+﻿sealed class CompletedShipment : Shipment
 {
-    public StandardShipment(
+    public CompletedShipment(
         string trackingCode,
         string description,
         decimal weight,
@@ -8,11 +8,5 @@
         DeliveryAddress destination)
         : base(trackingCode, description, weight, deliveryFee, destination)
     {
-    }
-
-    public override void PrintShipment()
-    {
-        Console.WriteLine("Standard Shipment");
-        base.PrintShipment();
     }
 }

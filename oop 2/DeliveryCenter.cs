@@ -1,6 +1,7 @@
 ﻿class DeliveryCenter
 {
     public string CenterName { get; set; } = "Unknown";
+    public Driver Driver { get; set; } = null!;
 
     private Shipment[] shipments = new Shipment[20];
 

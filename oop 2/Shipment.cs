@@ -73,6 +73,18 @@
             DeliveryFee = newFee;
     }
 
+    public void UpdateWeight(decimal newWeight)
+    {
+        if (newWeight > 0)
+            Weight = newWeight;
+    }
+
+    public void UpdateWeight(decimal newWeight, decimal packingWeight)
+    {
+        if (newWeight > 0 && packingWeight >= 0)
+            Weight = newWeight + packingWeight;
+    }
+
     public virtual void PrintShipment()
     {
         Console.WriteLine("Tracking Code : " + TrackingCode);
